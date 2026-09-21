@@ -5,10 +5,6 @@ void main() {
     int target = 15;
 
     for (int number : numbers) {
-        if (number == target) {
-            IO.println("Found");
-        } else {
-            IO.println("Not found");
+        IO.println(number == target ? "Found" : "Not found");
         }
-    }
 }
