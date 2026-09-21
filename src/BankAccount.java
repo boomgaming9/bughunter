@@ -1,17 +1,24 @@
 /* Skriv en klasse til at håndtere bankkonti */
 
-double balance = 1000;
-
 void main() {
-    withdraw(1200);
-    deposit(100);
-    IO.println(balance);
+    Account konto = new Account(1000);
+    konto.withdraw(1200);
+    konto.deposit(100);
+    IO.println(konto.balance);
 }
 
-void withdraw(double amount) {
-    balance = balance - amount;
-}
+public class Account {
+    private double balance = 0;
 
-void deposit(double amount) {
-    balance = balance + amount;
+    public Account (double balance) {
+        this.balance = balance;
+    }
+
+    void withdraw(double amount) {
+        balance -= amount;
+    }
+
+    void deposit(double amount) {
+        balance += amount;
+    }
 }
