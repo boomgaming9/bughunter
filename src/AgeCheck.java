@@ -3,17 +3,5 @@
 void main() {
     int age = Integer.parseInt(IO.readln("Indtast din alder: "));
     
-    if (isAdult(age)) {
-        IO.println("Du er en voksen.");
-    } else {
-        IO.println("Du er ikke en voksen.");
-    }
-}
-
-boolean isAdult(int age) {
-    if (age > 18) {
-        return true;
-    } else {
-        return false;
-    }
+    IO.println(age > 18 ? "Du er en voksen" : "Du er ikke en voksen.");
 }
